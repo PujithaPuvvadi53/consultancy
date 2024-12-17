@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Us - Abroad Consultancy</title>
+</head>
+<body>
+    <header>
+        <div class="overlay">
+            <h1>Contact Us</h1>
+            <p>Your trusted partner in pursuing education abroad. Reach out to us for expert guidance and assistance.</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contact Information -->
+        <section id="contactInfo">
+            <h2>Contact Information</h2>
+            <p>We are here to address all your queries and provide the support you need for your study abroad journey.</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:info@abroadconsultancy.com">info@abroadconsultancy.com</a></li>
+                <li><strong>Phone:</strong> <a href="tel:+918885683567">+91 8885683567</a></li>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/918885683567" target="_blank">+91 8885683567</a></li>
+                <li><strong>Office Hours:</strong> Monday to Saturday, 9:00 AM to 6:00 PM</li>
+                <li><strong>Address:</strong> 123 Main Street, New Delhi, India</li>
+            </ul>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="contactFormSection">
+            <form id="contactForm">
+                <h3>Send Us a Message</h3>
+                <p>Fill out the form below, and our team will get back to you as soon as possible.</p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section id="whyChooseUs">
+            <h3>Why Choose Abroad Consultancy?</h3>
+            <p>We provide personalized guidance to ensure a smooth and successful transition to your dream destination:</p>
+            <ul>
+                <li>Comprehensive support for university applications.</li>
+                <li>Expert advice on visa processes and documentation.</li>
+                <li>Guidance on scholarships and financial aid opportunities.</li>
+                <li>Post-arrival support to help you settle in comfortably.</li>
+            </ul>
+        </section>
+
+        <!-- Map Section -->
+        <section id="map">
+            <h3>Visit Us</h3>
+            <p>Our office is located in the heart of the city, making it easy for you to visit us for personalized consultations:</p>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.42130348531141!3d37.774929579759074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064dfac8f09%3A0x39c2280c61c7c9f3!2sGoogle!5e0!3m2!1sen!2sin!4v1670938542528!5m2!1sen!2sin" 
+                width="100%" 
+                height="350" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </section>
+
+        <!-- Frequently Asked Questions -->
+        <section id="faq">
+            <h3>Frequently Asked Questions</h3>
+            <details>
+                <summary>What services do you provide?</summary>
+                <p>We assist with university selection, application processes, visa guidance, and post-arrival support.</p>
+            </details>
+            <details>
+                <summary>Can you help with scholarships?</summary>
+                <p>Yes, we guide you on available scholarships and help you with the application process.</p>
+            </details>
+            <details>
+                <summary>What countries do you support?</summary>
+                <p>We assist with admissions in countries like the USA, UK, Canada, Australia, and many more.</p>
+            </details>
+        </section>
+
+        <!-- Social Media Links -->
+        <section id="socialMedia">
+            <h3>Connect With Us</h3>
+            <p>Follow us on social media to stay updated:</p>
+            <ul>
+                <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Abroad Consultancy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const phoneInput = document.getElementById('phone').value;
+            const emailInput = document.getElementById('email').value;
+
+            // Check if phone input is exactly 10 digits
+            if (!/^\d{10}$/.test(phoneInput)) {
+                alert('Please enter a valid 10-digit phone number.');
+                return;
+            }
+
+            // Validate email input to ensure it contains @ and a domain (e.g., gmail.com)
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(emailInput)) {
+                alert('Please enter a valid email address (e.g., name@domain.com).');
+                return;
+            }
+
+            // Show success message if validation passes
+            alert('Your message has been successfully sent!');
+
+            // Reset the form (optional)
+            this.reset();
+        });
+    </script>
+</body>
+</html> 

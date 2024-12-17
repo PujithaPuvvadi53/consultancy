@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Our Services - Abroad Consultancy</title>
+</head>
+<body class="page-background services-background">
+    <header>
+        <div class="overlay">
+            <h1>Our Services</h1>
+            <p>Comprehensive solutions to make your study abroad journey seamless.</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Services Section -->
+        <section id="services">
+            <h2>Explore Our Expert Services</h2>
+            <p>We provide tailored services to meet the unique needs of every student. Here's what we offer:</p>
+
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Visa Assistance</h3>
+                    <p>Our dedicated team ensures that your visa application process is hassle-free. From document preparation to interview guidance, we’ve got you covered.</p>
+                    <ul>
+                        <li>Documentation review and checklist</li>
+                        <li>Mock visa interviews</li>
+                        <li>Application submission tracking</li>
+                    </ul>
+                    <label>
+                        <input type="checkbox" name="service" value="visa_assistance" /> Select this service
+                    </label>
+                </div>
+
+                <div class="service-item">
+                    <h3>Course and University Counseling</h3>
+                    <p>We assist you in choosing the right course and university based on your interests, budget, and future goals. Get personalized advice from experts.</p>
+                    <ul>
+                        <li>Profile assessment</li>
+                        <li>Shortlisting universities</li>
+                        <li>Guidance on application deadlines</li>
+                    </ul>
+                    <label>
+                        <input type="checkbox" name="service" value="course_counseling" /> Select this service
+                    </label>
+                </div>
+
+                <div class="service-item">
+                    <h3>Admission Support</h3>
+                    <p>Secure admission to top universities with our professional support. We help ensure that all requirements are met and applications are submitted on time.</p>
+                    <ul>
+                        <li>Application form assistance</li>
+                        <li>Editing and proofreading SOPs/LOEs</li>
+                        <li>Tracking admission status</li>
+                    </ul>
+                    <label>
+                        <input type="checkbox" name="service" value="admission_support" /> Select this service
+                    </label>
+                </div>
+
+                <div class="service-item">
+                    <h3>Loan and Scholarship Guidance</h3>
+                    <p>We provide financial advice to make your education affordable, including assistance with student loans and scholarships.</p>
+                    <ul>
+                        <li>Identifying scholarships based on eligibility</li>
+                        <li>Loan application and documentation guidance</li>
+                        <li>Tips for securing the best loan rates</li>
+                    </ul>
+                    <label>
+                        <input type="checkbox" name="service" value="loan_guidance" /> Select this service
+                    </label>
+                </div>
+
+                <div class="service-item">
+                    <h3>Pre-Departure Orientation</h3>
+                    <p>Prepare for your life abroad with our comprehensive orientation program. From cultural tips to travel guidance, we’ll ensure you’re ready.</p>
+                    <ul>
+                        <li>Country-specific cultural briefing</li>
+                        <li>Travel and packing tips</li>
+                        <li>Emergency contacts and resources</li>
+                    </ul>
+                    <label>
+                        <input type="checkbox" name="service" value="pre_departure_orientation" /> Select this service
+                    </label>
+                </div>
+
+                <div class="service-item">
+                    <h3>Test Preparation Assistance</h3>
+                    <p>We provide resources and guidance to help you excel in exams like IELTS, TOEFL, GRE, and GMAT.</p>
+                    <ul>
+                        <li>Access to top study materials</li>
+                        <li>Mock tests and evaluations</li>
+                        <li>Tips and strategies for scoring high</li>
+                    </ul>
+                    <label>
+                        <input type="checkbox" name="service" value="test_preparation" /> Select this service
+                    </label>
+                </div>
+            </div>
+
+            <form id="servicesForm">
+                <button type="submit" class="btn">Submit Selected Services</button>
+            </form>
+        </section>
+
+        <!-- Call to Action -->
+        <section id="cta">
+            <h2>Let Us Help You Achieve Your Dreams</h2>
+            <p>Get in touch with us today to learn more about our services or to book a consultation with one of our experts.</p>
+            <a href="contact.html" class="btn">Contact Us</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Abroad Consultancy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('servicesForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            const selectedServices = [];
+            const checkboxes = document.querySelectorAll('input[name="service"]:checked');
+
+            checkboxes.forEach(checkbox => selectedServices.push(checkbox.value));
+
+            if (selectedServices.length > 0) {
+                alert('Your selected services have been successfully submitted:\n' + selectedServices.join(', '));
+                window.location.href = 'index.html'; // Redirect to the home page
+            } else {
+                alert('Please select at least one service before submitting.');
+            }
+        });
+    </script>
+</body>
+</html>
